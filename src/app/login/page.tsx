@@ -25,12 +25,12 @@ const page = () => {
     <div className='bg-stone-900 h-screen w-full text-white flex items-center justify-center'>
          <Card className="w-full max-w-sm flex">
       <CardHeader>
-        <CardTitle>Signup to your account</CardTitle>
+        <CardTitle>Login to your account</CardTitle>
         <CardDescription>
-          Enter your email below to sign up to your account
+          Enter your email below to login to your account
         </CardDescription>
         <CardAction> 
-          <Link href={'/login'}>Login</Link>
+          <Link href={'/signup'}>signup</Link>
         </CardAction>
       </CardHeader>
       <CardContent>
@@ -58,7 +58,7 @@ const page = () => {
       </CardContent>
       <CardFooter className="flex-col gap-2">
         <Button type="submit" className="w-full">
-          Signup
+          Login
         </Button>
       </CardFooter>
     </Card>
