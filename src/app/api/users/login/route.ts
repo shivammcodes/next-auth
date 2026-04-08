@@ -37,7 +37,7 @@ export async function POST(request : NextRequest){
        const token= jwt.sign(payloadData,process.env.JWT_SECRET!,{expiresIn: "1d"});
 
        //creation of the response
-       const response=NextResponse.json({msg:["User login successful"],success:true},{status:200});
+       const response=NextResponse.json({msg:["User login successful"],success:true,payloadData},{status:200});
 
     //    attatching the cookie to the response
        response.cookies.set("token",token,{
