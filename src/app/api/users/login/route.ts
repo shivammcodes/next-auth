@@ -53,7 +53,7 @@ export async function POST(request : NextRequest){
 
     }
     catch(error :any){
-        //status is 500 because of server error not clinet error, 400 is clinet error.
+        //status is 500 because of server error not client error, 400 is clinet error.
         return NextResponse.json({error:["Something went wrong"]},{status:500});
     }
 }
