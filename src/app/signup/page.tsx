@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import toast from 'react-hot-toast';
+import AuthChecker from '@/components/AuthChecker'
 const page = () => {
     const router=useRouter();
     const[email,setEmail]=useState("");
@@ -51,7 +52,7 @@ const page = () => {
       }
     }
   return (
-    <div className='bg-stone-900 h-screen w-full text-white flex items-center justify-center'>
+      <div className='bg-stone-900 h-screen w-full text-white flex items-center justify-center'>
           <Card className="w-full max-w-sm flex">
       <CardHeader>
         <CardTitle>Signup to your account</CardTitle>
@@ -94,6 +95,7 @@ const page = () => {
       </form>
     </Card>
     </div>
+    
   )
 }
 

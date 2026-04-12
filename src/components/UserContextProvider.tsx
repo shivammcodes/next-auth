@@ -24,19 +24,22 @@ const UserContextProvider = ({children} : {children: React.ReactNode}) => {
       if(!response.ok){
         toast.error(data.error);
         router.push('/login');
-        setLoading(false);
         setUser(null);
         setUserIsAuthenticated(false);
       }
       else{
         setUser({email: data.user.email,_id: data.user._id});
         setUserIsAuthenticated(true); 
-        setLoading(false);
       }
       console.log("user data ",user);
     }
-    catch(error: any){
+    catch(error){
       console.log("Something went wrong");
+      setUser(null);
+      setUserIsAuthenticated(false);
+    } 
+    finally {
+    setLoading(false);
     }
   }
   useEffect(()=>{
